@@ -1,0 +1,18 @@
+<div class="container">
+	<br>
+    <input id="button" type="button" value="Go Home" onclick="location.href='/';">
+    <br><br>
+
+		<div id="section" class="blog_container">
+  		<h2> <%= @post.title %> </h2>
+    	  <label>Blog Post: <%= @post.body %></label><br>
+	      <br>
+	      <label>Author:<%= @post.author %></label><br>
+	      <br>
+	      <br><br>
+	       <input id="button" type="button" value="Edit" onclick="location.href='/<%= @post.title %>/<%= @post.id %>/edit';">
+	       <input id="button" type="button" value="Delete" onclick="location.href='/<%= @post.title %>/<%=@post.id%>/delete';">
+
+	     </div>
+ 		 <br>
+</div>

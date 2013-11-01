@@ -1,0 +1,19 @@
+<div class="container">
+
+  <form action="/<%= @post.title %>/<%= @post.id %>/edit" method="POST">
+
+    <!-- Basic blog input from Post table -->
+
+    <label>Title: <input type="text" name="post[title]" value="<%=@post.title %>" </label><br><br>
+    <label>Blog: <!-- input type="text" name="post[body]"  </label><br><br> -->
+    <textarea type="text" name ="post[body]" cols="40" rows="5" > Write new blog stuff</textarea><br><br>
+    <label>Author: <input type="text" name="post[author]" value="<%=@post.author %>"> </label><br><br>
+
+    <!-- Add a tag -->
+    <label for="post_tags">Tags:</label>
+    <input id="post_tags" name="tags" value="<%=@post.tags.first.name %>"><br><br>
+
+    <!-- Button -->
+    <input id="button" type="submit" value="Update!">
+  </form>
+</div>

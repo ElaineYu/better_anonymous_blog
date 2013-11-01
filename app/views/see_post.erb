@@ -1,0 +1,19 @@
+<div class="container">
+  <h1> All Blogs!</h1>
+      <input id="button" type="button" value="Go Home" onclick="location.href='/';">
+
+
+  		<div id="section" class="container">
+
+  	     <% @posts.reverse.each do |item| %>
+
+  		<h2> <%= item.title %> </h2>
+    	  <label>Blog Post: <%= item.body %></label><br>
+	      <br>
+	      <label>Author:<%= item.author %></label><br>
+	      <br>
+		  <% end %>
+      	<br>
+ 		 </div>
+ 		 
+</div>

@@ -1,0 +1,42 @@
+<div class="container">
+  <h1> Welcome to Create a Blog with Tags!</h1>
+
+<!--   <a href="/see_all_posts"> See All Posts</a>
+ -->
+  <div id="section" class="container">
+  <h2> Search posts by tag! </h2>
+    <% @tags.each do |item| %>
+       <a href="/<%= item.name %>"><%= item.name %><br></a>
+      <br>
+      <% end %>
+
+      <!-- Button Link -->
+      <input id="button" type="button" value="See All Posts" onclick="location.href='/see_all_posts';">
+
+  </div>
+
+
+
+  <div id="section" class="container"> 
+  <h2> Create a new post! </h2>
+
+
+  <form action="/create_post" method="POST">
+
+    <!-- Basic blog input from Post table -->
+
+    <label>Title: <input type="text" name="post[title]" placeholder="Title"> </label><br><br>
+    <label>Blog: <!-- input type="text" name="post[body]" placeholder="Blog details"> </label><br><br> -->
+    <textarea type="text" name ="post[body]" cols="40" rows="5" > Write your blog here </textarea><br><br>
+    <label>Author: <input type="text" name="post[author]" placeholder="author"> </label><br><br>
+
+    <!-- Add a tag -->
+    <label for="post_tags">Tags:</label>
+    <input id="post_tags" name="tags" value="tag1, tag2, some other tag, a fourth tag"><br><br>
+
+    <!-- Button -->
+    <input id="button" type="submit" value="Submit your blog!">
+  </form>
+  </div>
+
+</div>
